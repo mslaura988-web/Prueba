@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acerca del Instituto | Instituto Politécnico de Azua</title>
+  <style>
+    /* --- RESETEO BÁSICO --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* --- FONDO Y TIPOGRAFÍA --- */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0052a5 0%, #0078d7 100%);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* --- MENÚ --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 3;
+    }
+
+    .menu-principal {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 14px 0;
+    }
+
+    .menu-principal li {
+      margin: 0 20px;
+    }
+
+    .menu-principal a {
+      text-decoration: none;
+      color: #004c97;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .menu-principal a:hover,
+    .menu-principal a.activo {
+      background-color: #e6f0ff;
+      color: #002f63;
+    }
+
+    /* --- CONTENIDO PRINCIPAL --- */
+    main {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      max-width: 900px;
+      margin-top: 120px;
+      padding: 50px;
+      z-index: 2;
+      text-align: justify;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: #004c97;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2em;
+    }
+
+    h2 {
+      color: #0078d7;
+      margin-top: 25px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+
+    ul {
+      margin: 15px 0 20px 20px;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      color: white;
+      margin: 30px 0 15px;
+      font-size: 14px;
+      text-shadow: 1px 1px 2px #002f63;
+    }
+
+/* --- LOGO --- */
+.logo {
+  display: block;
+  margin: 20px auto; /* lo centra horizontalmente */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.08); /* efecto al pasar el mouse */
+}
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="menu-principal">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="formulario_estudiante.php">Formulario Estudiantil</a></li>
+      <li><a href="acercad.html" class="activo">Acerca del Instituto</a></li>
+      <li><a href="contactos.php">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+ <a href="index.html">
+  <img src="https://www.politecnicodeazua.com/img/logo512.png" alt="Logo del instituto" style="height:180px;" class="logo">
+</a>
+
+    <h1>Instituto Politécnico de Azua</h1>
+    <p>
+      El <strong>Instituto Politécnico de Azua (IPA)</strong> es una institución educativa técnica que forma 
+      profesionales competentes en distintas áreas del conocimiento, comprometidos con el desarrollo social, 
+      ético y productivo de la República Dominicana.
+    </p>
+
+    <h2>Objetivo Institucional</h2>
+    <p>
+      Brindar una educación integral basada en la excelencia académica, la tecnología y los valores, 
+      formando bachilleres técnicos capaces de incorporarse al mundo laboral o continuar estudios superiores.
+    </p>
+
+    <h2>Importancia del Registro Estudiantil</h2>
+    <p>
+      La presente página ha sido creada con el propósito de recopilar y mantener actualizada la información 
+      de los estudiantes activos y egresados del Instituto. Este registro oficial permite agilizar procesos 
+      académicos, administrativos y de certificación.
+    </p>
+
+    <ul>
+      <li><strong>Tipo de Proyecto:</strong> Plataforma institucional</li>
+      <li><strong>Función:</strong> Solicitud y registro de datos estudiantiles</li>
+      <li><strong>Desarrollado por:</strong> Estudiantes de Informática</li>
+      <li><strong>Año Escolar:</strong> 2025 – 2026</li>
+    </ul>
+
+    <p>
+      Si eres estudiante y deseas actualizar tu información, visita el  
+      <a href="formulario_estudiante.php" style="color:#004c97; font-weight:bold;">Formulario Estudiantil</a>.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Instituto Politécnico de Azua | Grupo #2 de Informática</p>
+  </footer>
+</body>
+</html>

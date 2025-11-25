@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title> 🎓📚INSTITUTO POLITÉCNICO DE AZUA📚🎓</title>
+
+  <style>
+    /* --- RESETEO Y FUENTES --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+      /* --- VIDEO DE FONDO --- */
+    video#fondo-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(60%); /* oscurece un poco el fondo */
+    }
+
+      /* Imagen de fondo 
+      background-image: url("");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    } */
+
+    /* --- CAPA OSCURA ENCIMA DEL FONDO --- */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    /* --- MENÚ SUPERIOR --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(240, 240, 240, 0.8);
+      z-index: 3; /* Encima del fondo y overlay */
+    }
+
+    .menu-principal {
+       list-style:none; 
+       display:flex; 
+       justify-content:center; 
+       padding:14px 0; 
+       margin:0;
+    
+    }
+
+    .menu-principal li {
+       margin:0 20px; 
+    }
+
+    .menu-principal a { 
+      text-decoration:none; 
+      color:#333; 
+      font-weight:600; 
+      padding:6px 12px; 
+      border-radius:6px; 
+      transition:0.2s; 
+    }
+
+    .menu-principal a:hover { 
+       background:#f7dcd6; 
+       color:#b34700; 
+    }
+
+   .menu-principal a.activo {
+      background: #f7dcd6;
+      color: #b34700;
+    }
+
+    /* --- CONTENIDO CENTRAL --- */
+    .contenido {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 45px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* --- BOTÓN --- */
+    .boton {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #ff7b00;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #ff9f40;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      z-index: 2;
+      font-size: 14px;
+      text-shadow: 1px 1px 3px black;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- MENÚ -->
+  
+  <nav>
+    <ul class="menu-principal">
+      <li><a href="index.html" class="activo">Inicio</a></li>
+      <li><a href="acercad.html">Acerca del Instituto</a></li>
+      <li><a href="contactos.php">Contacto</a></li>
+    </ul>
+  </nav>
+
+    <!-- 🎬 VIDEO DE FONDO -->
+  <video id="fondo-video" autoplay muted loop>
+    <source src="Video de WhatsApp 2025-11-10 a las 10.00.52_219becca.mp4" type="video/mp4">
+    Tu navegador no soporta el video de fondo.
+  </video>
+
+  <!-- CONTENIDO CENTRAL -->
+  <div class="contenido">
+    <h1>¡Bienvenidos, queridos estudiantes!</h1>
+    <h2>Esperamos estés listo y preparado para esta gran oportudidad de ser parte de esta Institución</h2>
+    <p>Dale click al botón <strong>Entrar</strong> para ingresar tus datos en el siguente formulario para mantener actualizada la información de los estudiantes activos y egresados del Instituto</p>
+    <a href="formulario_estudiante.php" class="boton">Entrar</a>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 Instituto Politécnico de Azua | Grupo #2 de Informática</p>
+  </footer>
+</body>
+</html>
